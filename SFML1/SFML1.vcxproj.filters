@@ -26,5 +26,8 @@
     <ClInclude Include="snake.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
+    <ClInclude Include="food.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
