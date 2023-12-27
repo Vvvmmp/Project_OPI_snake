@@ -21,6 +21,12 @@ void Tick() {
     sn[i].x = sn[i - 1].x;
     sn[i].y = sn[i - 1].y;
   }
+
+  (direction == UP) ? sn[0].y -= 1 : false;
+  (direction == LEFT) ? sn[0].x -= 1 : false;
+  (direction == DOWN) ? sn[0].y += 1 : false;
+  (direction == RIGHT) ? sn[0].x += 1 : false;
+
 }
 
 void TGameCore::open(RenderWindow* win) {
@@ -41,8 +47,20 @@ void TGameCore::open(RenderWindow* win) {
   Sprite gameOverTextSprite(gameOverText);
   gameOverTextSprite.scale(0.4, 0.4);
 
+  Clock clock;
+  float timer = 0, delay = 0.1;
+
     while (win->isOpen()) {
+
+        float time = clock.getElapsedTime().asSeconds();
+        clock.restart();
+        timer += time;
+
         events(win);
+
+        if (timer > delay && !gameOver) {
+            timer == 0;
+        }
         win->clear();
 
         win->display();
