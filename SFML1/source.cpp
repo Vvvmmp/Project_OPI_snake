@@ -2,7 +2,7 @@
 #include "game_core.h"
 #include "snake.h"
 
-
+int Width = 30, Height= 30;
 
 enum Tdirection { DOWN, LEFT, RIGHT, UP };
 Tdirection direction = DOWN;
@@ -11,7 +11,16 @@ void TGameCore::events(RenderWindow* win) {
     Event event;
     while (win->pollEvent(event)){
         if (event.type == Event::Closed) {
-            close(win);
+            win->close();
+        }
+        if (event.type == Event::KeyPressed && !isDirectionChanged) {
+            (event.key.code == Keyboard::Key::W && direction != DOWN) ? direction = UP, isDirectionChanged = true : false;
+            (event.key.code == Keyboard::Key::A && direction != RIGHT) ? direction = LEFT, isDirectionChanged = true : false;
+            (event.key.code == Keyboard::Key::S && direction != UP) ? direction = DOWN, isDirectionChanged = true : false;
+            (event.key.code == Keyboard::Key::D && direction != LEFT) ? direction = RIGHT, isDirectionChanged = true : false;
+            (event.key.code == Keyboard::Key::R && gameOver) ? gameOver = false, snakeLength = 4, IsBotPlaying = false : false;
+            (event.key.code == Keyboard::Key::I && !gameOver && !IsBotPlaying) ? IsBotPlaying = true, tickCounter = 0 : false;
+            (event.key.code == Keyboard::Key::I && !gameOver && IsBotPlaying && tickCounter > 0) ? IsBotPlaying = false : false;
         }
     }
 }
@@ -27,6 +36,10 @@ void Tick() {
   (direction == DOWN) ? sn[0].y += 1 : false;
   (direction == RIGHT) ? sn[0].x += 1 : false;
 
+  (sn[0].x >= Width) ? sn[0].x = 0 : false;
+  (sn[0].x < 0) ? sn[0].x = Width - 1 : false;
+  (sn[0].y >= Height) ? sn[0].y = 0 : false;
+  (sn[0].y < 0) ? sn[0].y = Height - 1 : false;
 }
 
 void TGameCore::open(RenderWindow* win) {
@@ -60,6 +73,7 @@ void TGameCore::open(RenderWindow* win) {
 
         if (timer > delay && !gameOver) {
             timer == 0;
+            Tick();
         }
         win->clear();
 
