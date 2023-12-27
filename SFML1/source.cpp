@@ -2,7 +2,13 @@
 #include "game_core.h"
 #include "snake.h"
 
-int Width = 30, Height= 30;
+int snakeLength = 4;
+int tickCounter = 0;
+bool gameOver = false;
+bool isDirectionChanged = false;
+bool IsBotPlaying = false;
+int Width = 30, Height = 30;
+int Screen = 25;
 
 enum Tdirection { DOWN, LEFT, RIGHT, UP };
 Tdirection direction = DOWN;
@@ -40,6 +46,19 @@ void Tick() {
   (sn[0].x < 0) ? sn[0].x = Width - 1 : false;
   (sn[0].y >= Height) ? sn[0].y = 0 : false;
   (sn[0].y < 0) ? sn[0].y = Height - 1 : false;
+
+  if ((sn[0].x == food.x) && (sn[0].y == food.y)) {
+      snakeLength++;
+      for (int i = 0; i < snakeLength; i++)
+          while (food.x == sn[i].x && food.y == sn[i].y) {
+              food.x = rand() % Width;
+              food.y = rand() % Height;
+          }
+  }
+
+  for (int i = 1; i < snakeLength; i++) {
+      ((sn[0].x == sn[i].x) && (sn[0].y == sn[i].y)) ? gameOver = true : false;
+  }
 }
 
 void TGameCore::open(RenderWindow* win) {
@@ -76,6 +95,29 @@ void TGameCore::open(RenderWindow* win) {
             Tick();
         }
         win->clear();
+
+        for (int i = 0; i < Width; i++) {
+            for (int j = 0; j < Height; j++) {
+                tiles.setPosition(i * Screen, j * Screen);
+                win->draw(tiles);
+            }
+        }
+        apples.setPosition(food.x * Screen, food.y * Screen);
+        win->draw(apples);
+
+        for (int i = 0; i < snakeLength; i++) {
+            (i != 0) ? Snake.setTextureRect(IntRect(0, 0, Screen, Screen)) : Snake.setTextureRect(IntRect(direction * Screen, Screen, Screen, Screen));
+            if (gameOver && i == 1) {
+                Snake.setTextureRect(IntRect(direction * Screen, Screen * 2, Screen, Screen));
+            }
+            Snake.setPosition(sn[i].x * Screen, sn[i].y * Screen);
+            win->draw(Snake);
+        }
+
+        if (gameOver) {
+            gameOverTextSprite.setPosition(0, Height / 2);
+            win->draw(gameOverTextSprite);
+        }
 
         win->display();
     }
