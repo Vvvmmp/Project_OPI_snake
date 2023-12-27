@@ -1,0 +1,12 @@
+﻿  source.cpp
+C:\snake\Project_OPI_snake\SFML1\source.cpp(98,35): warning C4305: аргумент: усечение из "double" в "float"
+C:\snake\Project_OPI_snake\SFML1\source.cpp(98,30): warning C4305: аргумент: усечение из "double" в "float"
+C:\snake\Project_OPI_snake\SFML1\source.cpp(104,28): warning C4305: инициализация: усечение из "double" в "float"
+C:\snake\Project_OPI_snake\SFML1\source.cpp(128,49): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\snake\Project_OPI_snake\SFML1\source.cpp(128,37): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\snake\Project_OPI_snake\SFML1\source.cpp(132,52): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\snake\Project_OPI_snake\SFML1\source.cpp(132,35): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\snake\Project_OPI_snake\SFML1\source.cpp(140,61): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\snake\Project_OPI_snake\SFML1\source.cpp(140,43): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\snake\Project_OPI_snake\SFML1\source.cpp(145,54): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+  SFML1.vcxproj -> C:\snake\Project_OPI_snake\SFML1\x64\Debug\SFML1.exe
