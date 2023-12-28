@@ -66,16 +66,18 @@ void TGameCore::events(RenderWindow* win) {
             win->close();
         }
 
-        if (event.type == Event::KeyPressed && !isDirectionChanged && !gameOver) {
+        if (event.type == Event::KeyPressed && !isDirectionChanged && !gameOver && !IsBotPlaying) {
             (event.key.code == Keyboard::Key::W && direction != DOWN) ? direction = UP, isDirectionChanged = true : false;
             (event.key.code == Keyboard::Key::A && direction != RIGHT) ? direction = LEFT, isDirectionChanged = true : false;
             (event.key.code == Keyboard::Key::S && direction != UP) ? direction = DOWN, isDirectionChanged = true : false;
             (event.key.code == Keyboard::Key::D && direction != LEFT) ? direction = RIGHT, isDirectionChanged = true : false;
-            (event.key.code == Keyboard::Key::I && !gameOver && !IsBotPlaying) ? IsBotPlaying = true, tickCounter = 0 : false;
-            (event.key.code == Keyboard::Key::I && !gameOver && IsBotPlaying && tickCounter > 0) ? IsBotPlaying = false : false;
         }
         if (event.type == Event::KeyPressed) {
           (event.key.code == Keyboard::Key::R && gameOver) ? gameOver = false, snakeLength = 4, IsBotPlaying = false, isDirectionChanged = false : false;
+        }
+        if (event.type == Event::KeyPressed && !gameOver) {
+          (event.key.code == Keyboard::Key::I && !gameOver && !IsBotPlaying) ? IsBotPlaying = true, tickCounter = 0 : false;
+          (event.key.code == Keyboard::Key::I && !gameOver && IsBotPlaying && tickCounter > 0) ? IsBotPlaying = false : false;
         }
     }
 }

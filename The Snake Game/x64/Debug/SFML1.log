@@ -1,4 +1,4 @@
-﻿Сборка начата 28.12.2023 16:01:52.
+﻿Сборка начата 28.12.2023 18:47:12.
 Уровень детализации журнала: Normal.     1>Проект "C:\snake\Project_OPI_snake\The Snake Game\SFML1.vcxproj" в узле 2 (целевые объекты Build).
      1>PrepareForBuild:
          Структурированный вывод включен. Форматирование диагностики компилятора будет отражать иерархию ошибок. Подробнее см. https://aka.ms/cpp/structured-output.
@@ -6,20 +6,18 @@
          Создание "x64\Debug\SFML1.tlog\unsuccessfulbuild", так как было задано "AlwaysCreate".
          Обращение к "x64\Debug\SFML1.tlog\unsuccessfulbuild".
        ClCompile:
-         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\bin\HostX64\x64\CL.exe /c /I"C:\snake\Project_OPI_snake\SFML-2.6.1\include" /ZI /JMC /nologo /W3 /WX- /diagnostics:column /sdl /Od /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /permissive- /Fo"x64\Debug\\" /Fd"x64\Debug\vc143.pdb" /external:W3 /Gd /TP /FC /errorReport:prompt main.cpp source.cpp
-         main.cpp
+         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\bin\HostX64\x64\CL.exe /c /I"C:\snake\Project_OPI_snake\SFML-2.6.1\include" /ZI /JMC /nologo /W3 /WX- /diagnostics:column /sdl /Od /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /permissive- /Fo"x64\Debug\\" /Fd"x64\Debug\vc143.pdb" /external:W3 /Gd /TP /FC /errorReport:prompt source.cpp
          source.cpp
-     1>C:\snake\Project_OPI_snake\The Snake Game\source.cpp(100,35): warning C4305: аргумент: усечение из "double" в "float"
-     1>C:\snake\Project_OPI_snake\The Snake Game\source.cpp(100,30): warning C4305: аргумент: усечение из "double" в "float"
-     1>C:\snake\Project_OPI_snake\The Snake Game\source.cpp(106,28): warning C4305: инициализация: усечение из "double" в "float"
-     1>C:\snake\Project_OPI_snake\The Snake Game\source.cpp(130,49): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-     1>C:\snake\Project_OPI_snake\The Snake Game\source.cpp(130,37): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-     1>C:\snake\Project_OPI_snake\The Snake Game\source.cpp(134,52): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-     1>C:\snake\Project_OPI_snake\The Snake Game\source.cpp(134,35): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-     1>C:\snake\Project_OPI_snake\The Snake Game\source.cpp(142,61): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-     1>C:\snake\Project_OPI_snake\The Snake Game\source.cpp(142,43): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-     1>C:\snake\Project_OPI_snake\The Snake Game\source.cpp(147,54): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-         Создание кода...
+     1>C:\snake\Project_OPI_snake\The Snake Game\source.cpp(102,35): warning C4305: аргумент: усечение из "double" в "float"
+     1>C:\snake\Project_OPI_snake\The Snake Game\source.cpp(102,30): warning C4305: аргумент: усечение из "double" в "float"
+     1>C:\snake\Project_OPI_snake\The Snake Game\source.cpp(108,28): warning C4305: инициализация: усечение из "double" в "float"
+     1>C:\snake\Project_OPI_snake\The Snake Game\source.cpp(132,49): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+     1>C:\snake\Project_OPI_snake\The Snake Game\source.cpp(132,37): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+     1>C:\snake\Project_OPI_snake\The Snake Game\source.cpp(136,52): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+     1>C:\snake\Project_OPI_snake\The Snake Game\source.cpp(136,35): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+     1>C:\snake\Project_OPI_snake\The Snake Game\source.cpp(144,61): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+     1>C:\snake\Project_OPI_snake\The Snake Game\source.cpp(144,43): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+     1>C:\snake\Project_OPI_snake\The Snake Game\source.cpp(149,54): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
        Link:
          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\bin\HostX64\x64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\snake\Project_OPI_snake\The Snake Game\x64\Debug\SFML1.exe" /INCREMENTAL /ILK:"x64\Debug\SFML1.ilk" /NOLOGO /LIBPATH:"C:\snake\Project_OPI_snake\SFML-2.6.1\lib" "sfml-graphics-d.lib" "sfml-window-d.lib" "sfml-system-d.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\snake\Project_OPI_snake\The Snake Game\x64\Debug\SFML1.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /ENTRY:"mainCRTStartup" /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\snake\Project_OPI_snake\The Snake Game\x64\Debug\SFML1.lib" /MACHINE:X64 x64\Debug\main.obj
          x64\Debug\source.obj
@@ -33,18 +31,18 @@
 
        "C:\snake\Project_OPI_snake\The Snake Game\SFML1.vcxproj" (целевой объект Build ) (1) ->
        (Целевой объект ClCompile) -> 
-         C:\snake\Project_OPI_snake\The Snake Game\source.cpp(100,35): warning C4305: аргумент: усечение из "double" в "float"
-         C:\snake\Project_OPI_snake\The Snake Game\source.cpp(100,30): warning C4305: аргумент: усечение из "double" в "float"
-         C:\snake\Project_OPI_snake\The Snake Game\source.cpp(106,28): warning C4305: инициализация: усечение из "double" в "float"
-         C:\snake\Project_OPI_snake\The Snake Game\source.cpp(130,49): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-         C:\snake\Project_OPI_snake\The Snake Game\source.cpp(130,37): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-         C:\snake\Project_OPI_snake\The Snake Game\source.cpp(134,52): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-         C:\snake\Project_OPI_snake\The Snake Game\source.cpp(134,35): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-         C:\snake\Project_OPI_snake\The Snake Game\source.cpp(142,61): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-         C:\snake\Project_OPI_snake\The Snake Game\source.cpp(142,43): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-         C:\snake\Project_OPI_snake\The Snake Game\source.cpp(147,54): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+         C:\snake\Project_OPI_snake\The Snake Game\source.cpp(102,35): warning C4305: аргумент: усечение из "double" в "float"
+         C:\snake\Project_OPI_snake\The Snake Game\source.cpp(102,30): warning C4305: аргумент: усечение из "double" в "float"
+         C:\snake\Project_OPI_snake\The Snake Game\source.cpp(108,28): warning C4305: инициализация: усечение из "double" в "float"
+         C:\snake\Project_OPI_snake\The Snake Game\source.cpp(132,49): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+         C:\snake\Project_OPI_snake\The Snake Game\source.cpp(132,37): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+         C:\snake\Project_OPI_snake\The Snake Game\source.cpp(136,52): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+         C:\snake\Project_OPI_snake\The Snake Game\source.cpp(136,35): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+         C:\snake\Project_OPI_snake\The Snake Game\source.cpp(144,61): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+         C:\snake\Project_OPI_snake\The Snake Game\source.cpp(144,43): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+         C:\snake\Project_OPI_snake\The Snake Game\source.cpp(149,54): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
 
     Предупреждений: 10
     Ошибок: 0
 
-Прошло времени 00:00:02.20
+Прошло времени 00:00:01.60
