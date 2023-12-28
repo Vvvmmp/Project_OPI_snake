@@ -7,6 +7,7 @@ int screen = 25;
 
 int main() {
 	RenderWindow* window = new RenderWindow(VideoMode(screen * width, screen * height), "Snake!");
+	window->setFramerateLimit(75);
 	TGameCore WINDOW;
 	WINDOW.open(window);
 

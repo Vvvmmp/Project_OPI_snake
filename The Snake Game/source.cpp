@@ -71,9 +71,11 @@ void TGameCore::events(RenderWindow* win) {
             (event.key.code == Keyboard::Key::A && direction != RIGHT) ? direction = LEFT, isDirectionChanged = true : false;
             (event.key.code == Keyboard::Key::S && direction != UP) ? direction = DOWN, isDirectionChanged = true : false;
             (event.key.code == Keyboard::Key::D && direction != LEFT) ? direction = RIGHT, isDirectionChanged = true : false;
-            (event.key.code == Keyboard::Key::R && gameOver) ? gameOver = false, snakeLength = 4, IsBotPlaying = false : false;
             (event.key.code == Keyboard::Key::I && !gameOver && !IsBotPlaying) ? IsBotPlaying = true, tickCounter = 0 : false;
             (event.key.code == Keyboard::Key::I && !gameOver && IsBotPlaying && tickCounter > 0) ? IsBotPlaying = false : false;
+        }
+        if (event.type == Event::KeyPressed) {
+          (event.key.code == Keyboard::Key::R && gameOver) ? gameOver = false, snakeLength = 4, IsBotPlaying = false, isDirectionChanged = false : false;
         }
     }
 }
