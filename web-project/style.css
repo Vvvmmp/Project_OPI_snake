@@ -1,0 +1,86 @@
+    
+
+.zag{
+    display: flex;
+    border-bottom: 2px solid black;
+    align-items: center; 
+    font-family: 'Press Start 2P', cursive;
+}
+.logo{
+margin-left: 350px;
+width: 100px;
+height: 100px;
+}
+.zag div{
+    font-size: 48px;  
+}
+
+p {
+    text-align: center;
+    font-size: 18px;
+    color: #486228;
+    font-family: 'Press Start 2P', cursive;
+    margin-bottom: 20px;
+  } 
+ul{
+    font-size: 18px;
+    color: #486228;
+    font-family: 'Press Start 2P', cursive;
+    margin-bottom: 20px;
+}
+ol{
+    font-family: 'Press Start 2P', cursive;
+    margin-bottom: 20px; 
+    font-size: 14px;
+    color: #2d2d2d;
+}
+h2 {
+    text-align: center;
+    font-size: 24px;    
+    color: #333;
+    font-family: 'Press Start 2P', cursive;
+    margin-bottom: 20px;
+  }
+  
+  .images {
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+  }
+  
+  .downloads {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .downloads div {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .downloads1, .downloads2 {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 18px;    
+    color: #101010;
+    font-family: 'Press Start 2P', cursive;
+    margin-bottom: 15px;
+  }
+  
+  .image-container {
+    border: black solid 4px;
+  }
+  
+  .image-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .download-link {
+    display: block;
+    text-align: center;
+    color: rgb(50, 52, 49);
+    padding: 5px;
+    font-size: 14px;
+  }
