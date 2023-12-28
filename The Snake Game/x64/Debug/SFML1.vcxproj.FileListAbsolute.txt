@@ -1,0 +1,2 @@
+C:\snake\Project_OPI_snake\SFML1\x64\Debug\SFML1.exe
+C:\snake\Project_OPI_snake\The Snake Game\x64\Debug\SFML1.exe

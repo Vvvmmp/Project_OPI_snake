@@ -1,1 +1,0 @@
-C:\snake\Project_OPI_snake\SFML1\x64\Debug\SFML1.exe
