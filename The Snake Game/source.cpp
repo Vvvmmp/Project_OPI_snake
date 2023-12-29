@@ -1,6 +1,7 @@
 #include "game_core.h"
 #include "food.h"
 #include "snake.h"
+#include <ctime>
 
 int snakeLength = 4;
 int tickCounter = 0;
@@ -83,7 +84,7 @@ void TGameCore::events(RenderWindow* win) {
 }
 
 void TGameCore::open(RenderWindow* win) {
-
+    srand(time(NULL));
     Texture tile;
     tile.loadFromFile("C:/snake/Project_OPI_snake/The Snake Game/assets/tiles.png");
     Sprite tiles(tile);
